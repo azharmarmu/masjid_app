@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:masjid_app/core/initializer/app_di.dart';
-import 'package:masjid_app/presentation/blocs/prayer_time/prayer_time_cubit.dart';
 
+import '../../blocs/prayer_time/prayer_time_cubit.dart';
 import 'widgets/namaz_time_widget.dart';
 
 class HomeWidget extends StatelessWidget {

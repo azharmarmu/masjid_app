@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:masjid_app/presentation/app_router.dart';
-import 'package:masjid_app/presentation/blocs/auth/auth_cubit.dart';
-import 'package:masjid_app/presentation/blocs/login/login_cubit.dart';
-import 'package:masjid_app/presentation/blocs/theme/theme_cubit.dart';
+import 'package:masjid_app/core/shared/app_strings.dart';
 
-import '../../core/initializer/app_di.dart';
+import '../blocs/auth/auth_cubit.dart';
+import '../blocs/login/login_cubit.dart';
+import '../blocs/theme/theme_cubit.dart';
+import '../core/initializer/app_di.dart';
+import '../core/initializer/app_router.dart';
 
 class MasjidAPP extends StatelessWidget {
   const MasjidAPP({super.key});
@@ -34,7 +35,7 @@ class MasjidAPP extends StatelessWidget {
           builder: (_, state) {
             return MaterialApp.router(
               debugShowCheckedModeBanner: false,
-              title: 'Your App',
+              title: AppStrings.appName,
               theme: state,
               routerDelegate: appRouter.routerDelegate,
               routeInformationParser: appRouter.routeInformationParser,

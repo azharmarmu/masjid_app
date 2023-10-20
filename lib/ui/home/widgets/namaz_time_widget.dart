@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:masjid_app/core/initializer/app_di.dart';
-import 'package:masjid_app/domain/entities/prayer_time_entity.dart';
-import 'package:masjid_app/presentation/blocs/prayer_time/prayer_time_cubit.dart';
-import 'package:masjid_app/presentation/ui/__shared/extensions/widget_extensions.dart';
+import 'package:masjid_app/models/response/prayer_time_entity.dart';
+import 'package:masjid_app/ui/__shared/extensions/widget_extensions.dart';
+
+import '../../../blocs/prayer_time/prayer_time_cubit.dart';
 
 class NamazTimeWidget extends StatelessWidget {
   final PrayerTimeEntity prayerTimeEntity;
@@ -62,16 +63,16 @@ class NamazTimeWidget extends StatelessWidget {
                       context: context,
                       initialTime: TimeOfDay(hour: hour, minute: min),
                     );
-    
+
                     if (res != null) {
                       String mode = 'pm';
-                      int _hour = res.hour - 12;
-                      if (_hour < 0) {
-                        _hour = _hour + 12;
+                      int hour0 = res.hour - 12;
+                      if (hour0 < 0) {
+                        hour0 = hour0 + 12;
                         mode = 'am';
                       }
-                      int _min = res.minute;
-                      value = '$_hour:$_min $mode';
+                      int min0 = res.minute;
+                      value = '$hour0:$min0 $mode';
                       prayerTimeMap[key] = value;
 
                       locator

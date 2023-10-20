@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:masjid_app/core/shared/app_strings.dart';
-import 'package:masjid_app/presentation/ui/landing/landing_page.dart';
-import 'package:masjid_app/presentation/ui/login/login_page.dart';
 
 import '../../blocs/auth/auth_cubit.dart';
+import '../landing/landing_page.dart';
+import '../login/login_page.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
