@@ -1,8 +1,8 @@
-import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:masjid_app/core/shared/app_firestore.dart';
-import 'package:masjid_app/domain/entities/prayer_time_entity.dart';
+import 'package:masjid_app/models/response/prayer_time_entity.dart';
 
 part 'prayer_time_state.dart';
 

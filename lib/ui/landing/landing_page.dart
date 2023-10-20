@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:masjid_app/core/initializer/app_di.dart';
-import 'package:masjid_app/presentation/blocs/login/login_cubit.dart';
-import 'package:masjid_app/presentation/ui/__shared/extensions/widget_extensions.dart';
+import 'package:masjid_app/ui/__shared/extensions/widget_extensions.dart';
 
-import '../../../core/shared/app_strings.dart';
+import '../../blocs/login/login_cubit.dart';
+import '../../core/shared/app_strings.dart';
 import '../home/home_widget.dart';
 
 class LandingPage extends StatelessWidget {
@@ -21,7 +21,7 @@ class LandingPage extends StatelessWidget {
           ),
         ],
       ),
-      body: HomeWidget(),
+      body: const HomeWidget(),
     );
   }
 }

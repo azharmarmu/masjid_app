@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'ui/landing/landing_page.dart';
-import 'ui/login/login_page.dart';
-import 'ui/splash/splash_page.dart';
+import '../../ui/landing/landing_page.dart';
+import '../../ui/login/login_page.dart';
+import '../../ui/splash/splash_page.dart';
+
 
 final GoRouter appRouter = GoRouter(
   navigatorKey: GlobalKey<NavigatorState>(),

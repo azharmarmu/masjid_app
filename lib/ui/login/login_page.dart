@@ -3,16 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:masjid_app/core/initializer/app_di.dart';
 import 'package:masjid_app/core/shared/app_strings.dart';
-import 'package:masjid_app/presentation/blocs/login/login_cubit.dart';
-import 'package:masjid_app/presentation/ui/__shared/extensions/widget_extensions.dart';
-import 'package:masjid_app/presentation/ui/__shared/widgets/app_button.dart';
-
+import 'package:masjid_app/ui/__shared/extensions/widget_extensions.dart';
+import '../../blocs/hide_and_seek/hide_and_seek_cubit.dart';
+import '../../blocs/login/login_cubit.dart';
+import '../__shared/widgets/app_button.dart';
 import '../__shared/widgets/app_textfield.dart';
 import '../__shared/widgets/utils.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final HideAndSeekCubit hideAndSeekCubit = locator.get<HideAndSeekCubit>();
   LoginPage({super.key});
 
   @override
@@ -25,16 +26,19 @@ class LoginPage extends StatelessWidget {
             controller: _emailController,
             label: AppStrings.email,
           ).gapBottom(8.h),
-          AppTextField(
-            controller: _passwordController,
-            label: AppStrings.password,
-            obscureText: true,
-            suffixIcon: IconButton(
-              onPressed: () {
-                
-              },
-              icon: const Icon(Icons.private_connectivity),
-            ),
+          BlocBuilder<HideAndSeekCubit, bool>(
+            bloc: hideAndSeekCubit,
+            builder: (_, state) {
+              return AppTextField(
+                controller: _passwordController,
+                label: AppStrings.password,
+                obscureText: state,
+                suffixIcon: IconButton(
+                  onPressed: () => hideAndSeekCubit.change(),
+                  icon: Icon(!state ? Icons.visibility : Icons.visibility_off),
+                ),
+              );
+            },
           ).gapBottom(16.h),
           BlocConsumer<LoginCubit, LoginStatus>(
             listener: (_, state) {
