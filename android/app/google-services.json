@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "458698728419",
+    "project_id": "my-masjid-4cb75",
+    "storage_bucket": "my-masjid-4cb75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458698728419:android:2c5f26054d1b9c57a536d6",
+        "android_client_info": {
+          "package_name": "com.example.masjid_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458698728419-djr8c5r5944d029n3p717nk7jop31v9c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAohRvBsJznGlbDh-TH6hnhHnyV1sa-wNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458698728419-djr8c5r5944d029n3p717nk7jop31v9c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "458698728419-1d4k9cnppsn4a3vh96s40qv9q2sbvc17.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.appdevs.bemuslim"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458698728419:android:b0c1b12afbcd447ba536d6",
+        "android_client_info": {
+          "package_name": "com.sabeel.mymasjid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458698728419-djr8c5r5944d029n3p717nk7jop31v9c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAohRvBsJznGlbDh-TH6hnhHnyV1sa-wNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458698728419-djr8c5r5944d029n3p717nk7jop31v9c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "458698728419-1d4k9cnppsn4a3vh96s40qv9q2sbvc17.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.appdevs.bemuslim"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
